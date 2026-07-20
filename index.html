@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,13 +25,7 @@
         }
 
         .navbar,
-        section,
-        h1,
-        h2,
-        h3,
-        p,
-        ul,
-        form {
+        section {
             position: relative;
             z-index: 1;
         }
@@ -40,6 +35,8 @@
             justify-content: center;
             padding: 15px;
             background: rgba(0,0,0,0.7);
+            position: sticky;
+            top: 0;
         }
 
         .nav-links {
@@ -47,6 +44,7 @@
             display: flex;
             gap: 25px;
             padding: 0;
+            margin: 0;
         }
 
         .nav-links a {
@@ -87,173 +85,174 @@
         button:hover {
             background-color: #39ff14;
         }
+
+        ul {
+            line-height: 1.8;
+        }
     </style>
 </head>
-
 <body>
 
-<canvas id="matrix"></canvas>
+    <canvas id="matrix"></canvas>
 
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li>#home></li>
+            <li>#about</li>
+            <li>#projects</li>
+            <li>#contact</li>
+        </ul>
+    </nav>
 
-<nav class="navbar">
-    <ul class="nav-links">
-        <li>#home</li>
-        <li>#about</li>
-        <li>#projects</li>
-        <li>">Contact</a></li>
-    </ul>
-</nav>
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
 
+        <p>
+            Hello, my name is Tijay Anaya. This website showcases my
+            technical skills, professional experience, and projects.
+            I am continuously developing my knowledge in technology,
+            networking, and web development while building practical
+            experience through real-world projects.
+        </p>
+    </section>
 
-<section id="home">
-    <h1>Welcome to My Portfolio</h1>
+    <section id="about">
+        <h2>About Me</h2>
 
-    <p>
-        Hello, my name is Tijay Anaya. This website was created to
-        showcase my technical skills, projects, and professional
-        development. As I continue learning new technologies and
-        expanding my IT knowledge, this portfolio will serve as a
-        record of my accomplishments and experience.
-    </p>
-</section>
+        <p>
+            I am interested in information technology, networking,
+            infrastructure deployment, and web development. I enjoy
+            learning new technologies and applying them to solve
+            real-world problems.
+        </p>
 
-<section id="about">
-    <h2>About Me</h2>
+        <h3>Skills</h3>
 
-    <p>
-        I am currently expanding my knowledge in information technology,
-        networking, web development, and project management. I enjoy
-        learning new technologies, solving technical problems, and
-        working on projects that improve my skills and experience.
-    </p>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>GitHub & GitHub Pages</li>
+            <li>Network Infrastructure</li>
+            <li>Wireless Networking</li>
+            <li>Microsoft Excel</li>
+            <li>Technical Support</li>
+            <li>Project Planning</li>
+            <li>Problem Solving</li>
+        </ul>
+    </section>
 
-    <p>
-        This portfolio website was created using HTML, CSS, GitHub,
-        and GitHub Pages as part of my learning journey in web
-        development.
-    </p>
+    <section id="projects">
+        <h2>Projects</h2>
 
-    <h3>Skills</h3>
+        <h3>Portfolio Website</h3>
 
-    <ul>
-        <li>HTML & CSS</li>
-        <li>GitHub & GitHub Pages</li>
-        <li>Network Infrastructure</li>
-        <li>Microsoft Excel</li>
-        <li>Project Planning</li>
-        <li>Problem Solving</li>
-        <li>Technical Support</li>
-    </ul>
-</section>
+        <p>
+            Created and published a personal portfolio website using
+            HTML, CSS, GitHub, and GitHub Pages. Designed navigation
+            menus, developed content sections, and implemented a
+            Matrix-style animated background.
+        </p>
 
-<section id="projects">
-    <h2>Projects</h2>
+        <h3>Security Camera, Code Blue Emergency System, and Network Infrastructure Deployment</h3>
 
-    <h3>Portfolio Website</h3>
+        <p>
+            Installed and configured Code Blue emergency camera systems
+            and surveillance cameras to support safety and security
+            operations.
+        </p>
 
-    <p>
-        Created and published a personal portfolio website using HTML,
-        CSS, GitHub, and GitHub Pages. Developed navigation, content
-        sections, and a custom Matrix-style animated background.
-    </p>
+        <p>
+            Installed and configured multiple network switches and
+            wireless access points (APs) to provide reliable network
+            connectivity throughout facilities.
+        </p>
 
-    <h3>Security Camera, Code Blue Emergency System, and Network Infrastructure Deployment</h3>
+        <h3>Responsibilities</h3>
 
-    <p>
-        Installed and configured Code Blue emergency camera systems and
-        surveillance cameras to support facility safety and security.
-        Assisted with equipment installation, troubleshooting, testing,
-        and system verification to ensure proper operation.
-    </p>
+        <ul>
+            <li>Installed and configured Code Blue emergency camera systems</li>
+            <li>Installed and configured surveillance cameras</li>
+            <li>Installed and configured network switches</li>
+            <li>Installed and configured wireless access points (APs)</li>
+            <li>Verified device connectivity and system performance</li>
+            <li>Troubleshot network and hardware issues</li>
+            <li>Supported cabling and infrastructure deployment</li>
+            <li>Documented installation and configuration procedures</li>
+        </ul>
 
-    <p>
-        Installed and configured network switches and wireless access
-        points (APs) to provide reliable network connectivity throughout
-        the facility. Tested communication between devices, performed
-        basic troubleshooting, and verified network performance.
-    </p>
+        <h3>Technical Skills Demonstrated</h3>
 
-    <h3>Responsibilities</h3>
+        <ul>
+            <li>Network Infrastructure</li>
+            <li>Switch Configuration</li>
+            <li>Wireless Networking</li>
+            <li>IP Camera Systems</li>
+            <li>Code Blue Emergency Systems</li>
+            <li>Network Troubleshooting</li>
+            <li>GitHub Pages</li>
+            <li>Web Development Fundamentals</li>
+        </ul>
+    </section>
 
-    <ul>
-        <li>Installed and configured Code Blue emergency camera systems</li>
-        <li>Installed and configured surveillance cameras</li>
-        <li>Installed and configured network switches</li>
-        <li>Installed and configured wireless access points (APs)</li>
-        <li>Verified network connectivity and system performance</li>
-        <li>Troubleshot network and hardware issues</li>
-        <li>Supported cabling and infrastructure deployment</li>
-        <li>Documented installation and configuration processes</li>
-    </ul>
+    <section id="contact">
+        <h2>Contact Me</h2>
 
-    <h3>Technical Skills Demonstrated</h3>
+        <form>
+            <input type="text" placeholder="Your Name" required>
 
-    <ul>
-        <li>Network Infrastructure</li>
-        <li>Switch Configuration</li>
-        <li>Wireless Networking</li>
-        <li>IP Camera Systems</li>
-        <li>Code Blue Emergency Systems</li>
-        <li>Network Troubleshooting</li>
-        <li>GitHub Pages</li>
-        <li>Web Development Fundamentals</li>
-    </ul>
-</section>
+            <input type="email" placeholder="Your Email" required>
 
-<section id="contact">
-    <h2>Contact Me</h2>
+            <textarea rows="5" placeholder="Your Message"></textarea>
 
-    <form>
-        <input type="text" placeholder="Your Name" required>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-        <input type="email" placeholder="Your Email" required>
+    <script>
+        const canvas = document.getElementById("matrix");
+        const ctx = canvas.getContext("2d");
 
-        <textarea rows="5" placeholder="Your Message"></textarea>
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
 
-        <button type="submit">Send Message</button>
-    </form>
-</section>
+        const chars = "01";
+        const fontSize = 16;
+        const columns = Math.floor(canvas.width / fontSize);
+        const drops = Array(columns).fill(1);
 
-<script>
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
+        function draw() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+            ctx.fillStyle = "#00ff00";
+            ctx.font = fontSize + "px monospace";
 
-const chars = "01";
-const fontSize = 16;
-const columns = Math.floor(canvas.width / fontSize);
-const drops = Array(columns).fill(1);
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
 
-function draw() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-    ctx.fillStyle = "#00ff00";
-    ctx.font = fontSize + "px monospace";
+                if (
+                    drops[i] * fontSize > canvas.height &&
+                    Math.random() > 0.975
+                ) {
+                    drops[i] = 0;
+                }
 
-    for (let i = 0; i < drops.length; i++) {
-        const text = chars[Math.floor(Math.random() * chars.length)];
-
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height &&
-            Math.random() > 0.975) {
-            drops[i] = 0;
+                drops[i]++;
+            }
         }
 
-        drops[i]++;
-    }
-}
+        setInterval(draw, 33);
 
-setInterval(draw, 33);
-
-window.addEventListener("resize", () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});
-</script>
+        window.addEventListener("resize", () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
 
 </body>
 </html>
+
+
+
+
