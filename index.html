@@ -1,8 +1,10 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tijay Anaya</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tijay Anaya Portfolio</title>
 
     <style>
         body {
@@ -23,152 +25,166 @@
         }
 
         .navbar,
+        section,
         h1,
         h2,
-        p,
-        section,
-        form {
+        p {
             position: relative;
             z-index: 1;
         }
 
         .navbar {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
             padding: 15px;
+            background: rgba(0,0,0,0.7);
         }
 
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 15px;
+            gap: 25px;
             padding: 0;
         }
 
         .nav-links a {
             color: #00ff00;
             text-decoration: none;
+            font-weight: bold;
         }
 
         .nav-links a:hover {
             color: white;
         }
 
+        section {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
         input,
         textarea,
         button {
+            width: 100%;
+            max-width: 500px;
             padding: 10px;
-            width: 300px;
-            max-width: 100%;
+            margin-top: 10px;
         }
 
         button {
-            background-color: #00ff00;
+            background: #00ff00;
             color: black;
             border: none;
             cursor: pointer;
         }
 
         button:hover {
-            background-color: #39ff14;
+            background: #39ff14;
         }
     </style>
 </head>
 
 <body>
 
-    <canvas id="matrix"></canvas>
+<canvas id="matrix"></canvas>
 
-    <nav class="navbar">
-        <div class="logo">Tijay Anaya</div>
+<nav class="navbar">
+    <ul class="nav-links">
+        <li>#homeHome</a></li>
+        <li>#about</li>
+        <li>#projects</li>
+        <li>#contact</li>
+    </ul>
+</nav>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <h1>Tijay Anaya</h1>
-
-    <h2>Network Tech | Cybersecurity Professional</h2>
-
+<section id="home">
+    <h1>Welcome to My Portfolio</h1>
     <p>
-        Welcome to my portfolio website.
+        Hello, my name is Tijay Anaya. This website showcases my learning
+        journey and projects as I continue developing my technical skills.
+    </p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am currently learning web development, GitHub, HTML, and project
+        management. My goal is to build my technical knowledge and continue
+        growing professionally.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <p><strong>Portfolio Website</strong></p>
+    <p>
+        Created and published a personal portfolio website using GitHub
+        Pages and HTML.
     </p>
 
+    <p><strong>Future Projects</strong></p>
     <p>
-        I am an IT professional with experience in networking,
-        cybersecurity, Microsoft 365, and infrastructure management.
+        Additional projects and accomplishments will be added here as I
+        continue learning.
     </p>
+</section>
 
-    <section class="contact">
-        <h1>Contact Me</h1>
+<section id="contact">
+    <h2>Contact Me</h2>
 
-        <p>
-            Feel free to reach out regarding projects,
-            internships, networking opportunities, or questions.
-        </p>
+    <form>
+        <input type="text" placeholder="Your Name" required>
 
-        <form>
-            <input type="text" placeholder="Tijay Anaya" required>
-            <br><br>
+        <input type="email" placeholder="Your Email" required>
 
-            <input type="email" placeholder="tanaya@students.cumberland.edu" required>
-            <br><br>
+        <textarea rows="5" placeholder="Your Message"></textarea>
 
-            <textarea placeholder="Your Message"></textarea>
-            <br><br>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+<script>
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
 
-    <script>
-        const canvas = document.getElementById("matrix");
-        const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+const chars = "01";
+const fontSize = 16;
+const columns = Math.floor(canvas.width / fontSize);
+const drops = Array(columns).fill(1);
 
-        const chars = "01";
-        const fontSize = 16;
-        const columns = Math.floor(canvas.width / fontSize);
-        const drops = Array(columns).fill(1);
+function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        function draw() {
-            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#00ff00";
+    ctx.font = fontSize + "px monospace";
 
-            ctx.fillStyle = "#00ff00";
-            ctx.font = fontSize + "px monospace";
+    for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
 
-            for (let i = 0; i < drops.length; i++) {
-                const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if (
-                    drops[i] * fontSize > canvas.height &&
-                    Math.random() > 0.975
-                ) {
-                    drops[i] = 0;
-                }
-
-                drops[i]++;
-            }
+        if (
+            drops[i] * fontSize > canvas.height &&
+            Math.random() > 0.975
+        ) {
+            drops[i] = 0;
         }
 
-        setInterval(draw, 33);
+        drops[i]++;
+    }
+}
 
-        window.addEventListener("resize", () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-    </script>
+setInterval(draw, 33);
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script>
 
 </body>
 </html>
-
