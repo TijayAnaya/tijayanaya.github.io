@@ -1,53 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tijay Anaya Portfolio</title>
+
+    <style>
+        body {
+            background: black;
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #matrix {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .navbar,
+        section,
+        h1,
+        h2,
+        h3,
+        p,
+        ul,
+        form {
+            position: relative;
+            z-index: 1;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background: rgba(0,0,0,0.7);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #00ff00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 60px auto;
+        }
+
+        h1, h2, h3 {
+            color: #00ff00;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #00ff00;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #39ff14;
+        }
+    </style>
+</head>
+
+<body>
+
+<canvas id="matrix"></canvas>
+
+<nav class="navbar">
+    <ul class="nav-links">
+        <li>#homeHome</a></li>
+        <li>#about</li>
+        <li>#projects</li>
+        <li>#contact</li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h1>Welcome to My Portfolio</h1>
+
+    <p>
+        Hello, my name is Tijay Anaya. This website was created to
+        showcase my technical skills, projects, and professional
+        development. As I continue learning new technologies and
+        expanding my IT knowledge, this portfolio will serve as a
+        record of my accomplishments and experience.
+    </p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+
+    <p>
+        I am currently expanding my knowledge in information technology,
+        networking, web development, and project management. I enjoy
+        learning new technologies, solving technical problems, and
+        working on projects that improve my skills and experience.
+    </p>
+
+    <p>
+        This portfolio website was created using HTML, CSS, GitHub,
+        and GitHub Pages as part of my learning journey in web
+        development.
+    </p>
+
+    <h3>Skills</h3>
+
+    <ul>
+        <li>HTML & CSS</li>
+        <li>GitHub & GitHub Pages</li>
+        <li>Network Infrastructure</li>
+        <li>Microsoft Excel</li>
+        <li>Project Planning</li>
+        <li>Problem Solving</li>
+        <li>Technical Support</li>
+    </ul>
+</section>
 
 <section id="projects">
     <h2>Projects</h2>
 
     <h3>Portfolio Website</h3>
+
     <p>
         Created and published a personal portfolio website using HTML,
-        CSS, GitHub, and GitHub Pages. Designed the layout, added
-        navigation, created content sections, and implemented a custom
-        Matrix-style animated background.
+        CSS, GitHub, and GitHub Pages. Developed navigation, content
+        sections, and a custom Matrix-style animated background.
     </p>
 
-    <h3>Security Camera and Network Infrastructure Project</h3>
+    <h3>Security Camera, Code Blue Emergency System, and Network Infrastructure Deployment</h3>
+
     <p>
-        Installed and configured security surveillance cameras and
-        Code Blue emergency camera systems. Assisted with mounting,
-        cabling, testing, and configuring equipment to ensure reliable
-        operation and connectivity.
+        Installed and configured Code Blue emergency camera systems and
+        surveillance cameras to support facility safety and security.
+        Assisted with equipment installation, troubleshooting, testing,
+        and system verification to ensure proper operation.
     </p>
 
     <p>
-        Installed and configured multiple network switches and wireless
-        access points (APs) to support network connectivity throughout
-        the facility. Verified communication between devices, tested
-        system performance, and assisted with troubleshooting network
-        issues to ensure proper operation.
+        Installed and configured network switches and wireless access
+        points (APs) to provide reliable network connectivity throughout
+        the facility. Tested communication between devices, performed
+        basic troubleshooting, and verified network performance.
     </p>
 
     <h3>Responsibilities</h3>
+
     <ul>
         <li>Installed and configured Code Blue emergency camera systems</li>
         <li>Installed and configured surveillance cameras</li>
         <li>Installed and configured network switches</li>
         <li>Installed and configured wireless access points (APs)</li>
-        <li>Assisted with network troubleshooting and testing</li>
-        <li>Verified device connectivity and system performance</li>
+        <li>Verified network connectivity and system performance</li>
+        <li>Troubleshot network and hardware issues</li>
         <li>Supported cabling and infrastructure deployment</li>
-        <li>Documented installation and configuration procedures</li>
+        <li>Documented installation and configuration processes</li>
     </ul>
 
-    <h3>Technical Skills</h3>
+    <h3>Technical Skills Demonstrated</h3>
+
     <ul>
         <li>Network Infrastructure</li>
         <li>Switch Configuration</li>
         <li>Wireless Networking</li>
-        <li>IP Cameras</li>
+        <li>IP Camera Systems</li>
         <li>Code Blue Emergency Systems</li>
         <li>Network Troubleshooting</li>
-        <li>HTML & CSS</li>
         <li>GitHub Pages</li>
+        <li>Web Development Fundamentals</li>
     </ul>
 </section>
 
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <textarea rows="5" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<script>
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const chars = "01";
+const fontSize = 16;
+const columns = Math.floor(canvas.width / fontSize);
+const drops = Array(columns).fill(1);
+
+function draw() {
+    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00ff00";
+    ctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height &&
+            Math.random() > 0.975) {
+            drops[i] = 0;
+        }
+
+        drops[i]++;
+    }
+}
+
+setInterval(draw, 33);
+
+window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>
